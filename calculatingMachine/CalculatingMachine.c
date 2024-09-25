@@ -6,8 +6,8 @@ int main()
 
 	while (exit != 99)
 	{
-		int num1 = InputNum1();
-		int num2 = InputNum2();
+		double num1 = InputNum1();
+		double num2 = InputNum2();
 		int oper = InputOper();
 		CalculatingMachine(num1, num2, oper);
 		printf("\n종료를 원하신다면 99를 입력해주십시요 : ");
