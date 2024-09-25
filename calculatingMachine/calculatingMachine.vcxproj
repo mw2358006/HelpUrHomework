@@ -130,7 +130,10 @@
     <ClInclude Include="CalculatingMachine.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CalculatingMachine.c" />
+    <ClCompile Include="CalculatingMachine.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

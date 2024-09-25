@@ -1,4 +1,5 @@
 //CalculatingMachine.c : 심플이즈 베스트
+#define _CRT_SECURE_NO_WARNINGS
 #include "CalculatingMachine.h"
 int main()
 {
@@ -11,7 +12,8 @@ int main()
 		int oper = InputOper();
 		CalculatingMachine(num1, num2, oper);
 		printf("\n종료를 원하신다면 99를 입력해주십시요 : ");
-		scanf("%d", &exit);
+		scanf("%d", &exit); // 얘는 운빨
+		printf("\n");
 	} 
 	return 0;
 }
