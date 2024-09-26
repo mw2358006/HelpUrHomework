@@ -1,7 +1,15 @@
-// CalculatingMachine.h : 강의가 어렵나요? 이걸 보세요. 이해를 못하나요?? 전과하세요
+// CalculatingMachine.h : 강의가 어려울때 참고 하세요
 #define _CRT_SECURE_NO_WARNINGS
 #include <math.h>
 #include <stdio.h>
+
+// 계산기 시작 화면
+void Title()
+{
+	printf("======\n");
+	printf("계산기\n");
+	printf("======\n");
+}
 
 // 1번째 숫자 입력
 double InputNum1()
@@ -26,38 +34,44 @@ double InputNum2()
 }
 
 // 연산자 입력
-int InputOper()
+char InputOper()
 {
-	int oper;
+	char* oper;
 
-	printf("연산자 : 0(덧셈) 1(뺄셈) 2(곱셈) 3(나눗셈) 4(나머지) 5(제곱)\n");
 	printf("연산자 입력 : ");
-	scanf("%d", &oper);
+	scanf("%s",&oper);
 	return oper;
 }
 
-// 로동로동
-void CalculatingMachine(double num1, double num2, int operInput)
+// 계산기 연산
+void CalculatingMachine(double num1, double num2, char operInput)
 {
-	switch (operInput)
+	if (operInput == '+')
 	{
-		case 0: // 덧셈
-			printf("%g + %g = %g", num1, num2, num1 + num2);
-			break;
-		case 1: // 뺄셈 
-			printf("%g - %g = %g", num1, num2, num1 - num2);
-			break;
-		case 2: // 곱셈
-			printf("%g * %g = %g", num1, num2, num1 * num2);
-			break;
-		case 3: // 나눗셈
-			printf("%g / %g = %g", num1, num2, num1 / num2);
-			break;
-		case 4: // 나머지
-			printf("%d % %d = %d", (int)num1, (int)num2, (int)num1 % (int)num2);
-			break;
-		case 5: // 제곱
-			printf("%g ^ %g = %g", num1,num2, pow(num1, num2));
-			break;
-	};
+		printf("%g + %g = %g", num1, num2, num1 + num2);
+	}
+	else if (operInput == '-')
+	{
+		printf("%g - %g = %g", num1, num2, num1 - num2);
+	}
+	else if (operInput == '*')
+	{
+		printf("%g * %g = %g", num1, num2, num1 * num2);
+	}
+	else if (operInput == '/') // 나눗셈
+	{
+		printf("%g / %g = %g", num1, num2, num1 / num2);
+	}
+	else if (operInput == '%') // 나머지
+	{
+		printf("%d % %d = %d", (int)num1, (int)num2, (int)num1 % (int)num2);
+	}
+	else if (operInput == '^')
+	{
+		printf("%g ^ %g = %g", num1, num2, pow(num1, num2));
+	}
+	else
+	{
+		printf("다시 시도해 보세요\n");
+	}
 }
