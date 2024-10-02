@@ -1,4 +1,4 @@
-//CalculatingMachine.c : 심플이즈 베스트
+//CalculatingMachine.c : 메인파일
 #define _CRT_SECURE_NO_WARNINGS
 #include "CalculatingMachine.h"
 int main()

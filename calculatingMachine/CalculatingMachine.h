@@ -1,4 +1,4 @@
-// CalculatingMachine.h : 강의가 어려울때 참고 하세요
+// CalculatingMachine.h : 강의가 어려울때 "참고" 하세요
 #define _CRT_SECURE_NO_WARNINGS
 #include <math.h>
 #include <stdio.h>
