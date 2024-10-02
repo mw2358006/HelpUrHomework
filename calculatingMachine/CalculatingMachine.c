@@ -11,7 +11,7 @@ int main()
 	{
 		double num1 = InputNum1();
 		char oper = InputOper();
-		double num2 = InputNum2();
+		double num2 = InputNum2(oper);
 
 		CalculatingMachine(num1, num2, oper);
 		printf("\n종료를 원하신다면 99를 입력해주십시요 : ");

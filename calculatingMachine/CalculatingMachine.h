@@ -14,7 +14,7 @@ void Title()
 // 1번째 숫자 입력
 double InputNum1()
 {
-	double num;
+	double num = 0.00;
 
 	printf("숫자 1 입력 : ");
 	scanf("%lf", &num);
@@ -23,14 +23,20 @@ double InputNum1()
 }
 
 // 2번째 숫자 입력
-double InputNum2()
+double InputNum2(char oper)
 {
 	double num;
-		
-	printf("숫자 2 입력 : ");
-	scanf("%lf", &num);
-
-	return num;
+	if (oper == '+' || oper == '-' || oper == '*' || oper == '/' || oper == '%' || oper == '^')
+	{
+		printf("숫자 2 입력 : ");
+		scanf("%lf", &num);
+		return num;
+	}
+	else
+	{
+		num = 0;
+		return num;
+	}
 }
 
 // 연산자 입력
@@ -46,6 +52,7 @@ char InputOper()
 // 계산기 연산
 void CalculatingMachine(double num1, double num2, char operInput)
 {
+	double total = 0;
 	if (operInput == '+')
 	{
 		printf("%g + %g = %g", num1, num2, num1 + num2);
@@ -69,6 +76,21 @@ void CalculatingMachine(double num1, double num2, char operInput)
 	else if (operInput == '^')
 	{
 		printf("%g ^ %g = %g", num1, num2, pow(num1, num2));
+	}
+	else if (operInput == 's')
+	{
+		total = sin(num1);
+		printf("%g sin = %g", num1, total);
+	}
+	else if (operInput == 'c')
+	{
+		total = cos(num1);
+		printf("%g cos = %g", num1, total);
+	}
+	else if (operInput == 't')
+	{
+		total = tan(num1);
+		printf("%g tan = %g", num1, total);
 	}
 	else
 	{
