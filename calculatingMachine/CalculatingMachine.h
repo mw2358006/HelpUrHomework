@@ -53,15 +53,15 @@ char InputOper()
 void CalculatingMachine(double num1, double num2, char operInput)
 {
 	double total = 0;
-	if (operInput == '+')
+	if (operInput == '+') // µ¡¼À
 	{
 		printf("%g + %g = %g", num1, num2, num1 + num2);
 	}
-	else if (operInput == '-')
+	else if (operInput == '-') // »¬¼À
 	{
 		printf("%g - %g = %g", num1, num2, num1 - num2);
 	}
-	else if (operInput == '*')
+	else if (operInput == '*') // °ö¼À
 	{
 		printf("%g * %g = %g", num1, num2, num1 * num2);
 	}
@@ -73,21 +73,21 @@ void CalculatingMachine(double num1, double num2, char operInput)
 	{
 		printf("%d % %d = %d", (int)num1, (int)num2, (int)num1 % (int)num2);
 	}
-	else if (operInput == '^')
+	else if (operInput == '^') // Á¦°ö
 	{
 		printf("%g ^ %g = %g", num1, num2, pow(num1, num2));
 	}
-	else if (operInput == 's')
+	else if (operInput == 's') // sin
 	{
 		total = sin(num1);
 		printf("%g sin = %g", num1, total);
 	}
-	else if (operInput == 'c')
+	else if (operInput == 'c') // cos
 	{
 		total = cos(num1);
 		printf("%g cos = %g", num1, total);
 	}
-	else if (operInput == 't')
+	else if (operInput == 't') // tan
 	{
 		total = tan(num1);
 		printf("%g tan = %g", num1, total);
