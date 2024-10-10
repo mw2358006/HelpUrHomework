@@ -52,48 +52,46 @@ char InputOper()
 // °è»ê±â ¿¬»ê
 void CalculatingMachine(double num1, double num2, char operInput)
 {
-	double total = 0;
-	if (operInput == '+') // µ¡¼À
+	switch (operInput)
 	{
-		printf("%g + %g = %g", num1, num2, num1 + num2);
-	}
-	else if (operInput == '-') // »¬¼À
-	{
-		printf("%g - %g = %g", num1, num2, num1 - num2);
-	}
-	else if (operInput == '*') // °ö¼À
-	{
-		printf("%g * %g = %g", num1, num2, num1 * num2);
-	}
-	else if (operInput == '/') // ³ª´°¼À
-	{
-		printf("%g / %g = %g", num1, num2, num1 / num2);
-	}
-	else if (operInput == '%') // ³ª¸ÓÁö
-	{
-		printf("%d % %d = %d", (int)num1, (int)num2, (int)num1 % (int)num2);
-	}
-	else if (operInput == '^') // Á¦°ö
-	{
-		printf("%g ^ %g = %g", num1, num2, pow(num1, num2));
-	}
-	else if (operInput == 's') // sin
-	{
-		total = sin(num1);
-		printf("%g sin = %g", num1, total);
-	}
-	else if (operInput == 'c') // cos
-	{
-		total = cos(num1);
-		printf("%g cos = %g", num1, total);
-	}
-	else if (operInput == 't') // tan
-	{
-		total = tan(num1);
-		printf("%g tan = %g", num1, total);
-	}
-	else
-	{
-		printf("´Ù½Ã ½ÃµµÇØ º¸¼¼¿ä\n");
-	}
+		case'+': // µ¡¼À
+			printf("%g + %g = %g", num1, num2, num1 + num2);
+			break;
+
+		case'-':
+			printf("%g - %g = %g", num1, num2, num1 - num2);
+			break;
+
+		case'*' : // °ö¼À
+			printf("%g * %g = %g", num1, num2, num1 * num2);
+			break;
+
+		case'/' : // ³ª´°¼À
+			printf("%g / %g = %g", num1, num2, num1 / num2);
+			break;
+
+		case'%' : // ³ª¸ÓÁö
+			printf("%d % %d = %d", (int)num1, (int)num2, (int)num1 % (int)num2);
+			break;
+
+		case'^' : // Á¦°ö
+			printf("%g ^ %g = %g", num1, num2, pow(num1, num2));
+			break;
+
+		case's' : // sin
+			printf("%g sin = %g", num1, sin(num1));
+			break;
+
+		case'c' : // cos
+			printf("%g cos = %g", num1, cos(num1));
+			break;
+
+		case 't' : // tan
+			printf("%g tan = %g", num1, tan(num1));
+			break;
+
+		defalut:
+			printf("´Ù½Ã ½ÃµµÇØ º¸¼¼¿ä.\n");
+			break;
+	};
 }
